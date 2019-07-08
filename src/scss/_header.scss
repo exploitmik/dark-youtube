@@ -1,0 +1,115 @@
+.menu {
+	background: $middleDark;
+	padding: 12px 0;
+
+	&.fixed {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	&.fixed + .container-body {
+		margin-top: 82px;
+	}
+
+	.menu-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.menu-left {
+			display: flex;
+			align-items: center;
+			flex: 1;
+
+			.btn-hamb {
+				width: 24px;
+				height: 24px;
+				svg {
+					fill: #fff;
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
+			}
+
+			.logo {
+				display: block;
+				width: 80px;
+				height: 24px;
+				margin-left: 28px;
+
+				svg {
+					fill: #fff;
+				}
+
+				& + sup {
+					display: inline;
+					color: $contrast;
+					font-size: 10px;
+					margin: 0 0 10px 2px;
+				}
+			}
+		}
+
+		.search-bar {
+			flex: 2;
+			form {
+				display: flex;
+				align-items: center;
+
+				.search {
+					flex-basis: 540px;
+					margin: 0;
+					background: $dark;
+					border: none;
+					padding: 6px;
+					color: hsla(0, 0, 100, 0.48);
+
+					&::placeholder {
+						color: hsla(0, 0, 100, 0.48);
+					}
+				}
+
+				.btn-search {
+					border: none;
+					background: $lightDark;
+					padding: 5px 24px;
+
+					i {
+						display: inline;
+						vertical-align: middle;
+						font-size: 21px;
+						color: rgba(255, 255, 255, 0.5);
+					}
+				}
+			}
+		}
+
+		.menu-right {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			flex: 1;
+
+			a {
+				margin-left: 20px;
+				svg {
+					width: 26px;
+					fill: #fff;
+				}
+
+				.profile-circle {
+					display: block;
+					width: 32px;
+					height: 32px;
+					background: hsla(0, 0, 100, 0.28);
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,274 @@
+.video {
+	.video-title {
+		margin-top: 24px;
+		font-size: 18px;
+		color: #fff;
+	}
+
+	.actions {
+		display: flex;
+		justify-content: space-between;
+		color: $contrast;
+		padding: 8px 0;
+		font-size: 11px;
+		margin-top: 8px;
+
+		svg {
+			width: 20px;
+			fill: $contrast;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 6px;
+		}
+
+		span:not(.views) {
+			text-transform: uppercase;
+			margin-left: 20px;
+			font-weight: 500;
+			letter-spacing: .05em;
+		}
+
+		.views {
+			font-size: 16px;
+		}
+
+		.like-unlike {
+			will-change: transform;
+
+			span:nth-child(1){
+				margin-left: 14px;
+			}
+				
+		}
+
+		.like-unlike::after {
+			position: absolute;
+			content: '';
+			width: 110%;
+			height: 2px;
+			background: $contrast;
+			display: block;
+			margin: 0 auto;
+			transform: translateY(14px);
+		}
+
+		.actions-right {
+			display: flex;
+		}
+	}
+
+	.author {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.content-left {
+			display: flex;
+			align-items: center;
+		}
+
+		.image {
+			display: block;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			margin-right: 20px;
+			background: url(https://yt3.ggpht.com/a/AGF-l78meRKd-_ci3yxQi8LbYHBYRF2cdD3tP9vhbQ=s48-mo-c-c0xffffffff-rj-k-no);
+		}
+
+		.info-pub {
+			.name {
+				color: $title;
+				margin-bottom: 4px;
+				font-size: 14px;
+			}
+
+			span {
+				color: $contrast;
+				font-size: 13px;
+			}
+			
+		}
+
+		.btn-subscribe {
+			padding: 10px 16px;
+			background: #cc0000;
+			color: #fff;
+			border-radius: 2px;
+			border: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 14px;
+			letter-spacing: .007px;
+		}
+	}
+
+	.description {
+		p {
+			margin: 20px 0 10px 66px;
+			width: 80%;
+			font-size: 14px;
+			line-height: 21px;
+			color: #fff;
+		}
+	}
+
+	.category {
+		margin-left: 66px;
+		margin-bottom: 20px;
+		span {
+			color: $contrast;
+			font-size: 14px;
+		}
+
+		span:nth-child(2){
+			margin-left: 50px;
+			color: #3ea6ff;
+			font-weight: 500;
+		}
+	}
+
+	.comments {
+		margin-top: 10px;
+		display: inline-block;
+		span {
+			font-size: 16px;
+			color: #fff;
+		}
+
+		.classification {
+			display: inline-block;
+			margin-left: 30px;
+
+			svg {
+				width: 24px;
+				margin-right: 4px;
+				vertical-align: -5px;
+				fill: $contrast;
+			}
+
+			font-size: 14px;
+			color: $contrast;
+			font-weight: 500;
+			letter-spacing: 0.02rem;
+		}
+	}
+
+	.add-comments {
+		display: flex;
+		margin-top: 26px;
+		align-items: center;
+
+		.image {
+			display: inline-block;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: $contrast;
+			flex: 0 0 auto;
+		}
+
+		.input {
+			width: 90.73%;
+
+			input {
+				width: 100%;
+				border: none;
+				background: transparent;
+				border-bottom: 1px solid $contrast;
+				margin-left: 16px;
+				font-size: 14px;
+				line-height: 21px;
+				color: #fff;
+			}
+		}
+	}
+
+	.add-comments-action {
+		display: flex;
+		justify-content: flex-end;
+
+		button {
+			font-size: 14px;
+			color: $dark;
+			padding: 10px 16px;
+			text-transform: uppercase;
+			font-weight: 600;
+			border: none;
+			border-radius: 2px;
+			background: #606060;
+		}
+
+		button:nth-child(1){
+			background: $dark;
+			color: $contrast;
+		}
+	}
+
+	.area-comments {
+
+		.margin-16 {
+			margin: 16px 0 16px 0;
+		}
+
+		.image {
+			display: inline-block;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: $contrast;
+			vertical-align: -26px;
+		}
+
+		.name-and-date {
+			display: inline-block;
+			margin-left: 16px;
+
+			span {
+				font-size: 13px;
+				color: #fff;
+				font-weight: 500;
+			}
+
+			span:nth-child(2){
+				color: $contrast;
+				font-weight: normal;
+			}
+		}
+
+		.comment {
+			margin-top: -16px;
+			margin-left: 66px;
+			font-size: 14px;
+			color: $title;
+			line-height: 20px;
+			width: 80%;
+		}
+
+		.actions-comments {
+			margin-left: 66px;
+			margin-top: 10px;
+			color: $contrast;
+			font-size: 13px;
+
+			svg {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				fill: $contrast;
+				vertical-align: middle;
+				margin-right: 8px;
+			}
+
+			span {
+				margin-right: 20px;
+			}
+
+			.response {
+				font-weight: 500;
+			}
+		}
+
+	}
+}

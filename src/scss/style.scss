@@ -1,0 +1,48 @@
+@import 'reset';
+@import 'vars';
+@import 'header';
+@import 'video';
+@import 'others-videos';
+
+body {
+	background-color: $dark;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+.container-body {
+	max-width: 1110px;
+	margin: 0 auto;
+	padding: 0 26px;
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	grid-column-gap: 24px;
+}
+
+hr {
+	background: rgba(255, 255, 255, 0.08);
+	height: 1px;
+	border: none;
+}
+
+footer {
+	h2 {
+		text-align: center;
+		color: $contrast;
+		margin: 100px 0;
+
+		&::before {
+			content: '';
+			height: 2px;
+			background: $contrast;
+			width: 40px;
+			margin: 20px auto;
+			display: block;
+		}
+	}
+}

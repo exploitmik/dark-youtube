@@ -1,0 +1,160 @@
+.others-videos {
+
+	.video-apresentation {
+		margin: 16px 0;
+		display: grid;
+		grid-template-columns: 168px 1fr;
+		grid-column-gap: 8px;
+
+		&:nth-child(2)::after {
+			content: '';
+			display: block;
+			width: 396px;
+			background: rgba(255, 255, 255, 0.08);
+			height: 1px;
+			margin-top: 16px;
+		}
+
+		&:nth-child(2) .thumb .preview-bar, &:nth-child(9) .thumb .preview-bar, &:nth-last-child(1) .thumb .preview-bar {
+			width: 0;
+		}
+
+		&:nth-child(4n) .thumb .preview-bar::after{
+			width: 60%;
+		}
+
+		&:nth-child(6n) .thumb .preview-bar::after{
+			width: 100%;
+		}
+
+		.thumb {
+			width: 168px;
+			height: 94px;
+			background: $lightDark;
+			display: block;
+			position: relative;
+
+			.time {
+				position: absolute;
+				display: inline-block;
+				background: $dark;
+				font-size: 12px;
+				letter-spacing: 0.07em;
+				color: #fff;
+				right: 4px;
+				bottom: 4px;
+				padding: 4px;
+				border-radius: 2px;
+				font-weight: 500;
+				opacity: .9;
+			}
+			
+			.preview-bar {
+				position: absolute;
+				height: 4px;
+				background: $contrast;
+				width: 100%;
+				bottom: 0;
+
+				&::after {
+					content: '';
+					background: #cc0000;
+					width: 30%;
+					height: 4px;
+					display: block;
+				}
+			}
+		}
+
+		.description {
+
+			.name {
+				color: #fff;
+				font-size: 15px;
+				line-height: 16px;
+				font-weight: 500;
+			}
+
+			.channel {
+				font-size: 13px;
+				color: $contrast;
+				margin-top: 6px;
+			}
+
+			.views {
+				font-size: 13px;
+				color: $contrast;
+				margin-top: 4px;
+			}
+		}
+	}
+	
+	.next-video {
+
+		.header-next-video {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 14px;
+
+			span {
+				font-size: 16px;
+				color: #fff;
+			}
+
+			.automatic {
+
+				span {
+					color: $contrast;
+					font-size: 13px;
+					font-weight: 500;
+					margin-right: 8px;
+				}
+
+				.content {
+				  display: inline-flex;
+				  vertical-align: middle;
+				}
+
+				.switch-wrap {
+					cursor: pointer;
+					background: #393939;
+					width: 30px;
+					height: 15px;
+					border-radius: 33.5px;
+
+					input {
+						position: absolute;
+						opacity: 0;
+						width: 0;
+						height: 0;
+					}
+
+					.switch {
+					  height: 100%;
+					  display: grid;
+					  grid-template-columns: 0fr 1fr 1fr;
+					  transition: all .2s;
+					  transform: scale(1.4, 1.4);
+
+						&::after {
+							content: '';
+							border-radius: 50%;
+							background: #ccc;
+							grid-column: 2;
+							transition: all .2s;
+						}
+					}
+				}
+
+				input:checked + .switch {
+				  grid-template-columns: 1fr 1fr 0fr;
+				}
+
+				input:checked + .switch::after {
+				  background-color: #3EA6FF;
+				}
+			}
+		}
+	}
+}
