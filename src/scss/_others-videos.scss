@@ -1,7 +1,10 @@
 .others-videos {
+	@media (max-width: 1024px){
+		margin-top: 2rem;
+	}
 
 	.video-apresentation {
-		margin: 16px 0;
+		margin: 1rem 0;
 		display: grid;
 		grid-template-columns: 168px 1fr;
 		grid-column-gap: 8px;

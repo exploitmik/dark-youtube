@@ -24,6 +24,14 @@ body {
 	grid-column-gap: 24px;
 }
 
+@media (max-width: 1024px){
+	.container-body {
+		grid-template-columns: 1fr;
+		grid-column-gap: 0;
+	}
+}
+
+
 hr {
 	background: rgba(255, 255, 255, 0.08);
 	height: 1px;
