@@ -30,6 +30,10 @@
 
 		.views {
 			font-size: 16px;
+			@media (max-width: 778px){
+				font-size: 14px;
+				flex-basis: .1rem;
+			}
 		}
 
 		.like-unlike {
@@ -37,6 +41,12 @@
 
 			span:nth-child(1){
 				margin-left: 14px;
+			}
+
+			@media (max-width: 768px){
+				span {
+					margin: .4em;
+				}
 			}
 				
 		}
@@ -54,6 +64,15 @@
 
 		.actions-right {
 			display: flex;
+		}
+
+		.like span,
+		.unlike span,
+		.share span,
+		.save-playlist span {
+			@media (max-width: 768px){
+				display: none;
+			}
 		}
 	}
 
