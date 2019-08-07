@@ -30,9 +30,9 @@
 
 		.views {
 			font-size: 16px;
+			flex-basis: .1rem;
 			@media (max-width: 778px){
 				font-size: 14px;
-				flex-basis: .1rem;
 			}
 		}
 
@@ -43,9 +43,9 @@
 				margin-left: 14px;
 			}
 
-			@media (max-width: 768px){
-				span {
-					margin: .4em;
+			@media (max-width: 778px){
+				span:nth-child(1){
+					margin-left: 0;
 				}
 			}
 				
